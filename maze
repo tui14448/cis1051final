@@ -1,1 +1,18 @@
 import turtle
+
+window = turtle.Screen()
+window.bgcolor("pink")
+window.title("Mazerunner")
+window.setup(1000,1000)
+
+class Pen(turle.Turtle):
+  def __init__(self):
+    turtle.Turtle.__init__(self)
+    self.shape("square")
+    self.color("white")
+    self.penup()
+    self.speed(0)
+
+levels = [""]
+
+level 1 = [
