@@ -5,7 +5,7 @@ window.bgcolor("pink")
 window.title("Mazerunner")
 window.setup(1000,1000)
 
-class Pen(turle.Turtle):
+class Pen(turtle.Turtle):
   def __init__(self):
     turtle.Turtle.__init__(self)
     self.shape("square")
@@ -48,7 +48,7 @@ level_1 = [
 "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ]
 
-levels.apend(level_1)
+levels.append(level_1)
 
 def setup_maze(level):
   for y in range(len(level)):
