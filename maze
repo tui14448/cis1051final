@@ -5,18 +5,18 @@ window.bgcolor("pink")
 window.title("Mazerunner")
 window.setup(1050,1050)
 
-class Pen(turtle.Turtle):
+class Wall(turtle.Turtle):
   def __init__(self):
     turtle.Turtle.__init__(self)
-    self.shape("square")
+    self.shape("circle")
     self.color("white")
     self.penup()
     self.speed(0)
     
-class Player(turtle.Turtle):
+class Piece(turtle.Turtle):
   def __init__(self):
     turtle.Turtle.__init__(self)
-    self.shape("square")
+    self.shape("circle")
     self.color("purple")
     self.penup()
     self.speed(0)
@@ -25,7 +25,7 @@ class Player(turtle.Turtle):
     self.goto(self.xcor(), self.ycor() + 25)
     
   def go_down(self):
-    self.goto(self.xcor(), self.ycor() + 25)
+    self.goto(self.xcor(), self.ycor() - 25)
     
   def go_left(self):
     self.goto(self.xcor() - 25, self.ycor())
@@ -78,14 +78,14 @@ def setup_maze(level):
       screen_y = (358 - (y * 25))
       
       if character == "X":
-        pen.goto(screen_x, screen_y)
-        pen.stamp()
+        wall.goto(screen_x, screen_y)
+        wall.stamp()
         
       if character == "L":
-        pen.goto(screen_x, screen_y)
+        piece.goto(screen_x, screen_y)
         
-pen = Pen()
-player = Player()
+wall = Wall()
+piece = Piece()
 
 setup_maze(levels[1])
 
