@@ -20,6 +20,18 @@ class Player(turtle.Turtle):
     self.color("purple")
     self.penup()
     self.speed(0)
+    
+  def go_up(self):
+    self.goto(self.xcor(), self.ycor() + 25)
+    
+  def go_down(self):
+    self.goto(self.xcor(), self.ycor() + 25)
+    
+  def go_left(self):
+    self.goto(self.xcor() - 25, self.ycor())
+    
+  def go_right(self):
+    self.goto(self.xcor() + 25, self.ycor())
 
 levels = [""]
 
