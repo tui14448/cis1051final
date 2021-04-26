@@ -90,7 +90,7 @@ cell = Cell()
 piece = Piece()
 
 wall = []
-
+print(walls)
 setup_maze(levels[1])
 
 turtle.listen()
@@ -99,7 +99,7 @@ turtle.onkey(piece.go_right,"Right")
 turtle.onkey(piece.go_up,"Up")
 turtle.onkey(piece.go_down,"Down")
 
-window.tracer(0)
+wn.tracer(0)
 
 while True:
   pass
