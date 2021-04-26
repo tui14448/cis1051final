@@ -5,7 +5,7 @@ window.bgcolor("pink")
 window.title("Mazerunner")
 window.setup(1050,1050)
 
-class Wall(turtle.Turtle):
+class Cell(turtle.Turtle):
   def __init__(self):
     turtle.Turtle.__init__(self)
     self.shape("circle")
@@ -78,14 +78,18 @@ def setup_maze(level):
       screen_y = (358 - (y * 25))
       
       if character == "X":
-        wall.goto(screen_x, screen_y)
-        wall.stamp()
+        cell.goto(screen_x, screen_y)
+        cell.stamp()
+        
+        wall.append((screen_x,screen_y))
         
       if character == "L":
         piece.goto(screen_x, screen_y)
         
-wall = Wall()
+cell = Cell()
 piece = Piece()
+
+wall = []
 
 setup_maze(levels[1])
 
