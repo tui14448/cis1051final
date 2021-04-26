@@ -41,7 +41,7 @@ level_1 = [
 "XXXX XXXXXX                  X",
 "XXXX XXXXXX XXXXXXXXXXXXXXXX X",
 "X           X              X X",
-"XR         XXXXXXXXXXXXXXX X X",
+"XL         XXXXXXXXXXXXXXX X X",
 "XXXXXXXXXX X X          XX X X",
 "X        X X X XXXXXXXX XX X X",
 "X  XXXXXXX X X X X  X   XX X X",
@@ -81,7 +81,7 @@ def setup_maze(level):
         pen.goto(screen_x, screen_y)
         pen.stamp()
         
-      if character == "R":
+      if character == "L":
         pen.goto(screen_x, screen_y)
         
 pen = Pen()
