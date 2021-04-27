@@ -166,7 +166,7 @@ t = 120
 def countdown(t):
   while t:
     mins,secs = divmod(t, 60)
-    timer = '{:02d}:{:02d}'.format(mins,secs)
+    timer = format(mins,secs)
     print(timer,end="\r")
     time.sleep(1)
     t -= 1
@@ -175,4 +175,5 @@ print("Time's Up!!")
 
 window.update()
 
-
+#Referenced the following youtube playlist: https://www.youtube.com/watch?v=inocKE13DEA&list=PLlEgNdBJEO-lNDJgg90fmfAq9RzORkQWP&index=1
+#Referenced https://www.geeksforgeeks.org/how-to-create-a-countdown-timer-using-python/
